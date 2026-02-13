@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Love 💖</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  padding: 50px;
+  overflow: hidden;
+}
+
+h1 {
+  color: white;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.yes {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.no {
+  background-color: white;
+  color: #ff4d6d;
+  position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="text">Hi sweetheart! I would like to say you something... can I? 🥺💗</h1>
+
+<button class="yes" onclick="nextStep()">YES 💕</button>
+<button class="no" onmouseover="moveButton()">NO 🙈</button>
+
+<script>
+let step = 1;
+
+function nextStep() {
+  if (step === 1) {
+    document.getElementById("text").innerHTML =
+    "So sweet of you to spare your time with me, my love 🥹💞";
+    step++;
+  } else if (step === 2) {
+    document.getElementById("text").innerHTML =
+    "Naa enna solradhu nu theriyala, Unna idhu varaikum romba kashta paduthiten, enaku theriyum😔..naa en veetla maati face panna problems ah vida nee dhaan neraiya face panniruka🥺.,Unnoda hard times la unkooda illama ponadhuku enna mannichidu😢., Unna naa inime endha kaaranathukaagavum vida maten🌷🥹; innoru vaati yum nee illadha phase ah en life la naan experience panna virumbala❤️‍🩹,Unaku nambikka vara maari naa pathukuren😽..Idhuku munnadi naa unna endha maari pathukuteno adha vida adhigamaa pathukuren🤞🏻pinky Promise😘..Papa panna ellathukum sorry😣., I love You sooo much that I cant even express🫠🤎, I missed you, miss you🥺, unna hug panni azhanum nu dhaa thonudhu🫂✨️..Love you Baby🧸🔮Love you soo much Abii ma💓😽...Ummaah!!💋❤️";
+    step++;
+  } else if (step === 3) {
+    document.getElementById("text").innerHTML =
+    "I love you sooooo much… more than words can ever hold 💖✨<br><br>Will you be my Valentine? 💍🌹";
+    step++;
+  } else {
+    document.getElementById("text").innerHTML =
+    "Aahhh!! I knew you love me too 😌💘<br><br>Sending you virtual hugs and kisses 🤗💋";
+    document.body.innerHTML += "<br><img src='https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif' width='200'>";
+  }
+}
+
+function moveButton() {
+  let x = Math.random() * window.innerWidth;
+  let y = Math.random() * window.innerHeight;
+  document.querySelector(".no").style.left = x + "px";
+  document.querySelector(".no").style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
